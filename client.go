@@ -75,9 +75,9 @@ func WithTLSCert(tlsConf *tls.Config) ClientOption {
 	}
 }
 
-func WithLogger(l log2.Logger) ClientOption {
+func WithLogger(l log.Logger) ClientOption {
 	return func(client *Client) {
-		client.log.L = l
+		client.log = l
 	}
 }
 
